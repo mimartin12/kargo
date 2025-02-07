@@ -55,6 +55,11 @@ export const StageTag = ({
             {stage.status.lastPromotion.freight.images[0].tag}
           </div>
         )}
+        {stage.status?.lastPromotion?.freight?.charts && stage.status.lastPromotion.freight.charts[0]?.version && (
+          <div className='ml-2 text-xs'>
+            {stage.status.lastPromotion.freight.charts[0].version}
+          </div>
+        )}
       </div>
     </Tooltip>
   );
