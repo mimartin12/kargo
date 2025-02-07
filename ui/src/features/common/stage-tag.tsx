@@ -45,6 +45,16 @@ export const StageTag = ({
           </div>
         )}
         {stage.metadata?.name}
+        {stage.status?.lastPromotion?.freight?.commits && stage.status.lastPromotion.freight.commits[0]?.id && (
+          <div className='ml-2 text-xs'>
+            {stage.status.lastPromotion.freight.commits[0].id.substring(0, 7)}
+          </div>
+        )}
+        {stage.status?.lastPromotion?.freight?.images && stage.status.lastPromotion.freight.images[0]?.tag && (
+          <div className='ml-2 text-xs'>
+            {stage.status.lastPromotion.freight.images[0].tag}
+          </div>
+        )}
       </div>
     </Tooltip>
   );
